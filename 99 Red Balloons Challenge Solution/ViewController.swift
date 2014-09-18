@@ -30,7 +30,15 @@ class ViewController: UIViewController {
 
     @IBAction func nextBalloonButtonPressed(sender: UIBarButtonItem) {
         let balloon = balloonsArray[currentIndex]
-        balloonNumberTextField.text = "\(balloon.number) balloons"
+        
+        if balloon.number == 1 {
+            balloonNumberTextField.text = "\(balloon.number) Balloon"
+        } else {
+            balloonNumberTextField.text = "\(balloon.number) Balloons"
+        }
+            
+            
+            
         balloonImage.image = balloon.image
         currentIndex++
     }
